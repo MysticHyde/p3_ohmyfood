@@ -20,27 +20,39 @@
     <main>
         <section>
             <input type="text" name="" id="" placeholder="&#xF3c5;   Paris, Belleville">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, séléctionnées par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <div>
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, séléctionnées par nos soins.</p>
+                <button class="--color">Explorer nos restaurants</button>
+            </div>
         </section>
 
         <section>
             <h2>Fonctionnement</h2>
-            <div>
-                <span>1</span>
-                <i class="fa-solid fa-mobile-screen"></i>
-                <h3>Choisissez un restaurant</h3>
+
+            <div class="select_card">
+                <input type="checkbox" id="choice_restaurant">
+                <label for="choice_restaurant">
+                    <span>1</span>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>Choisissez un restaurant</h3>
+                </label>
             </div>
-            <div>
-                <span>2</span>
-                <i class="fa-solid fa-list-ul"></i>
-                <h3>Composez votre menu</h3>
+            <div class="select_card">
+                <input type="checkbox" id="choice_menu">
+                <label for="choice_menu">
+                    <span>2</span>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <h3>Composez votre menu</h3>
+                </label>
             </div>
-            <div>
-                <span>3</span>
-                <i class="fa-solid fa-store"></i>
-                <h3>Dégustez au restaurant</h3>
+            <div class="select_card">
+                <input type="checkbox" id="choice_eat">
+                <label for="choice_eat">
+                    <span>3</span>
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Dégustez au restaurant</h3>
+                </label>
             </div>
         </section>
 
