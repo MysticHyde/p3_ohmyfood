@@ -12,85 +12,31 @@
   background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
 }
 
+header {
+  text-align: center;
+}
+header .brand {
+  margin: 15px 0 10px 0;
+}
+
 main section {
   padding: 50px 20px;
+}
+main section .title {
+  margin-bottom: 25px;
 }
 main section .content {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
-main section .content .card {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  border-radius: 30px;
-  overflow: hidden;
-  background-color: white;
-}
-main section .content .card .thumbnail {
-  overflow: hidden;
-  height: 250px;
-  width: 100%;
-}
-main section .content .card .thumbnail img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-main section .content .card .about {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 10px;
-  gap: 10px;
-  width: 80%;
-}
-main section .content .card .about h3,
-main section .content .card .about p {
-  margin: 0;
-}
-main section .content .card .like {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 20%;
-  float: right;
-  height: unset;
-  font-size: 30px;
-}
-main section .content .card .like i {
-  display: block;
-  font-size: 30px;
-  color: black;
-}
-main section .content .card .like i ::before {
-  font-size: 0;
-}
-main section .content .card .like:hover i::before {
-  content: "\f004";
-  font-family: "FontAwesome";
-  font-size: 30px;
-  background: rgb(255, 121, 218);
-  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  transition: all 0.3s linear 0s;
-}
-main section:nth-child(1) {
+main section#presentation {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(247, 247, 247);
   padding: 0;
 }
-main section:nth-child(1) input {
+main section#presentation input {
   all: unset;
   text-align: center;
   padding: 20px 10px;
@@ -100,26 +46,23 @@ main section:nth-child(1) input {
   background-color: rgb(228, 228, 228);
   font-family: "Roboto", "FontAwesome";
 }
-main section:nth-child(1) input::placeholder {
+main section#presentation input::placeholder {
   color: #474747;
 }
-main section:nth-child(1) > div {
+main section#presentation > div {
   text-align: center;
   padding: 1em 1em;
 }
-main section:nth-child(1) > div h2 {
+main section#presentation > div h2 {
   padding: 20px 1em;
 }
-main section:nth-child(1) > div button {
+main section#presentation > div button {
   margin-bottom: 40px;
 }
-main section:nth-child(2) h2 {
-  margin-bottom: 30px;
-}
-main section:nth-child(2) .select_card {
+main section#fonctionnement .select_card {
   padding-left: 10px;
 }
-main section:nth-child(2) .select_card label {
+main section#fonctionnement .select_card label {
   position: relative;
   display: flex;
   align-items: center;
@@ -129,19 +72,23 @@ main section:nth-child(2) .select_card label {
   padding-left: 50px;
   color: #474747;
 }
-main section:nth-child(2) .select_card input[type=checkbox] {
+main section#fonctionnement .select_card label i {
+  color: #474747;
+  font-size: 20px;
+}
+main section#fonctionnement .select_card input[type=checkbox] {
   display: none;
 }
-main section:nth-child(2) .select_card input[type=checkbox]:checked + label {
+main section#fonctionnement .select_card input[type=checkbox]:checked + label {
   background-color: #f4eefc;
 }
-main section:nth-child(2) .select_card input[type=checkbox]:checked + label i {
+main section#fonctionnement .select_card input[type=checkbox]:checked + label i {
   color: #9356dc;
 }
-main section:nth-child(2) .select_card h3 {
+main section#fonctionnement .select_card h3 {
   margin-left: 1.5em;
 }
-main section:nth-child(2) .select_card span {
+main section#fonctionnement .select_card span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,13 +101,126 @@ main section:nth-child(2) .select_card span {
   width: 25px;
   height: 25px;
 }
-main section:nth-child(3) {
-  background-color: rgb(247, 247, 247);
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  padding: 20px;
+  background-color: #474747;
+  font-size: 18px;
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .brand {
   font-family: "Shrikhand", "cursive";
-  margin: 15px 0 10px 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: white;
+}
+.card .thumbnail {
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+}
+.card .thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card .about {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  gap: 5px;
+  width: 80%;
+}
+.card .about h3, .card .about p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20%;
+  float: right;
+  height: unset;
+  font-size: 30px;
+}
+.like i {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  color: black;
+}
+.like i ::after {
+  font-size: 0;
+}
+.like:hover i::after {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "\f004";
+  font-family: "FontAwesome";
+  font-size: 30px;
+  background: rgb(255, 121, 218);
+  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  animation: 0.3s linear 0s like;
+  -webkit-animation: 0.3s linear 0s like;
+}
+
+.btn.big_btn, main section#fonctionnement .select_card label, .card {
+  -webkit-box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes like {
+  from {
+    font-size: 0;
+    opacity: 0;
+  }
+  to {
+    font-size: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes like {
+  from {
+    font-size: 0;
+    opacity: 0;
+  }
+  to {
+    font-size: 30px;
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -173,13 +233,9 @@ p {
   font-size: 20px;
 }
 
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-header {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */

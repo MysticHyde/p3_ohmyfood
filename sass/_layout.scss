@@ -1,92 +1,28 @@
+header {
+    text-align: center;
+    .brand {
+        margin: 15px 0 10px 0;
+    }
+}
+
 main {
     section {
         padding: 50px 20px;
+
+        .title {
+            margin-bottom: 25px;
+        }
 
         .content {
             display: flex;
             flex-direction: column;
             row-gap: 20px;
-
-            .card {
-                position: relative;
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                border-radius: 30px;
-                overflow: hidden;
-                background-color: white;
-
-                .thumbnail {
-                    overflow: hidden;
-                    height: 250px;
-                    width: 100%;
-
-                    img {
-                        object-fit: cover;
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
-
-                .about {
-                    display: flex;
-                    flex-direction: column;
-                    box-sizing: border-box;
-                    padding: 10px;
-                    gap: 10px;
-                    width: 80%;
-                    h3,
-                    p {
-                        margin: 0;
-                    }
-                }
-
-                .like {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    box-sizing: border-box;
-                    width: 20%;
-                    float: right;
-                    height: unset;
-                    font-size: 30px;
-
-                    i {
-                        display: block;
-                        font-size: 30px;
-                        color: black;
-
-                        ::before {
-                            font-size: 0;
-                        }
-                    }
-
-                    &:hover {
-                        i::before {
-                            content: "\f004";
-                            font-family: "FontAwesome";
-                            font-size: 30px;
-                            background: rgb(255, 121, 218);
-                            background: linear-gradient(0deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
-                            background-size: 100%;
-                            background-repeat: repeat;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            -moz-background-clip: text;
-                            -moz-text-fill-color: transparent;
-
-                            transition: all 0.3s linear 0s;
-                        }
-                    }
-                }
-            }
         }
 
-        &:nth-child(1) {
+        &#presentation {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background-color: $background_grey;
             padding: 0;
 
             input {
@@ -117,13 +53,10 @@ main {
             }
         }
 
-        &:nth-child(2) {
-            h2 {
-                margin-bottom: 30px;
-            }
-
+        &#fonctionnement {
             .select_card {
                 padding-left: 10px;
+
                 label {
                     position: relative;
                     display: flex;
@@ -133,6 +66,12 @@ main {
                     border-radius: 20px;
                     padding-left: 50px;
                     color: $dark_grey;
+                    @extend %shadow_down;
+
+                    i {
+                        color: $dark_grey;
+                        font-size: 20px;
+                    }
                 }
 
                 input[type="checkbox"] {
@@ -168,9 +107,22 @@ main {
                 }
             }
         }
-
-        &:nth-child(3) {
-            background-color: $background_grey;
-        }
     }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    padding: 20px;
+    background-color: $dark_grey;
+    font-size: 18px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
 }
