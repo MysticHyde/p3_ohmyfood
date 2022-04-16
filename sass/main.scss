@@ -1,35 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import "buttons";
+@import "variables";
+@import "layout";
+@import "elements";
 
-$primaire_violet: #9356dc;
-$secondaire_rose: #ff79da;
-$tertiaire_vert: #99e2d0;
-$background_grey: rgb(247, 247, 247);
-$medium_grey: rgb(228, 228, 228);
-$dark_grey: #474747;
 
-button {
-    &.--color {
-        all: unset;
-        color: white;
-        font-weight: 500;
-        font-size: 18px;
-        padding: 1em;
-        border-radius: 30px;
-        background: rgb(255, 121, 218);
-        background: linear-gradient(180deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
-    }
-}
-
-h1 {
-    font-family: "Shrikhand", "cursive";
-    margin: 15px 0 10px 0;
-}
 
 h2 {
     font-size: 28px;
     font-weight: 800;
     margin: 0;
 }
+
 p {
     font-size: 20px;
 }
@@ -41,101 +23,4 @@ body {
 
 header {
     text-align: center;
-}
-
-main {
-    section {
-        padding: 50px 20px;
-
-        &:nth-child(1) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: $background_grey;
-            padding: 0;
-
-            input {
-                all: unset;
-                text-align: center;
-                padding: 20px 10px;
-                font-weight: 600;
-                font-size: 18px;
-                color: $dark_grey;
-                background-color: $medium_grey;
-                font-family: "Roboto", "FontAwesome";
-                &::placeholder {
-                    color: $dark_grey;
-                }
-            }
-
-            > div {
-                text-align: center;
-                padding: 1em 1em;
-
-                h2 {
-                    padding: 20px 1em;
-                }
-
-                button {
-                    margin-bottom: 40px;
-                }
-            }
-        }
-
-        &:nth-child(2) {
-            h2 {
-                margin-bottom: 30px;
-            }
-
-            .select_card {
-                padding-left: 10px;
-                label {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    padding: 10px;
-                    background-color: $background_grey;
-                    border-radius: 20px;
-                    padding-left: 50px;
-                    color: $dark_grey;
-                }
-
-                input[type="checkbox"] {
-                    display: none;
- 
-                    &:checked {
-
-                        +label  {
-                            background-color: mix(white, $primaire_violet, 90%);
-
-                            i {
-                                color: $primaire_violet;
-                            }
-                        }
-                    }
-                }
-
-                h3 {
-                    margin-left: 1.5em;
-                }
-
-                span {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    left: -10px;
-                    font-size: 15px;
-                    color: white;
-                    border-radius: 50%;
-                    background-color: $primaire_violet;
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-
-            div {
-            }
-        }
-    }
 }
