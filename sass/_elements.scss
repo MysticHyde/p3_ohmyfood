@@ -60,6 +60,10 @@
     }
     
     &:hover {
+        i {
+            animation: 0.3s  disappear;
+            -webkit-animation: 0.3s disappear;
+        }
         i::after {
             text-align: center;
             width: 100%;
@@ -77,13 +81,15 @@
             -webkit-text-fill-color: transparent;
             -moz-background-clip: text;
             -moz-text-fill-color: transparent;
-            animation: 0.3s linear 0s like;
-            -webkit-animation: 0.3s linear 0s like;
+            animation: 0.3s linear appear;
+            -webkit-animation: 0.3s linear appear;
         }
     }
-}
+};
 
 %shadow_down {
     -webkit-box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.2);
-}
+};
+
+

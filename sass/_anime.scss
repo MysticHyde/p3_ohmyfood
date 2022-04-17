@@ -1,4 +1,17 @@
-@keyframes like {
+@keyframes appear {
+    from {
+        font-size: 0;
+        opacity: 0;
+        bottom: 0;
+    }
+    to {
+        font-size: 30px;
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@-webkit-keyframes appear {
     from {
         font-size: 0;
         opacity: 0;
@@ -9,13 +22,22 @@
     }
 }
 
-@-webkit-keyframes like {
+@keyframes disappear {
+    from {
+        color: black;
+    }
+    to {
+        color: $primaire_violet;
+    }
+}
+
+@-webkit-keyframes disappear {
     from {
         font-size: 0;
-        opacity: 0;
+        opacity: 5;
     }
     to {
         font-size: 30px;
-        opacity: 1;
+        opacity: 0;
     }
 }

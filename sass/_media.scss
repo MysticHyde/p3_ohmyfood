@@ -1,0 +1,159 @@
+@media screen and (min-width: "768px") {
+    #fonctionnement {
+        .content {
+            flex-direction: row;
+            padding-left: 0;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 20px;
+
+            .select_card {
+                padding-left: 0;
+                flex-basis: 260px;
+                max-width: 300px;
+                label {
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 20px;
+                    text-align: center;
+                    gap: 20px;
+
+                    i {
+                        font-size: 40px;
+                    }
+
+                    h3 {
+                        margin: 0;
+                    }
+                }
+                span {
+                    top: -15px;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    #restaurants {
+        .content {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+
+            .card {
+                flex-grow: 1;
+                flex-basis: 300px;
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    body {
+        height: 100vh;
+    }
+    header {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        z-index: 1;
+        height: 70px;
+        box-sizing: border-box;
+        width: 400px;
+        border-right: solid 2px;
+        border-color: $background_grey;
+        -webkit-box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);;
+        box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);;
+    }
+
+    main {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        width: calc(100% - 400px);
+        overflow-y: scroll;
+        scrollbar-color: $primaire_violet;
+        scrollbar-width: 50px;
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: $primaire_violet;
+        }
+
+        section {
+            padding: 50px 30px;
+
+            .title {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 70px;
+                text-transform: uppercase;
+                background-color: white;
+                background-image: linear-gradient(90deg, $primaire_violet, $secondaire_rose);
+                background-size: 100%;
+                background-repeat: repeat;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-background-clip: text;
+                -moz-text-fill-color: transparent;
+            }
+
+            &#presentation {
+                position: fixed;
+                justify-content: flex-start;
+                left: 0;
+                top: 70px;
+                width: 400px;
+                height: calc(100vh - 270px);
+                box-sizing: border-box;
+                border-right: solid 2px;
+                border-color: $background_grey;
+                -webkit-box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);;
+                box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);;
+            }
+
+            &#fonctionnement .content {
+                gap: 2vw;
+                justify-content: center;
+
+                .select_card {
+                    flex-basis: 400px;
+                    max-width: 600px;
+                }
+            }
+
+            &#restaurants .content {
+                justify-content: flex-start;
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 400px;
+        height: 200px;
+        box-sizing: border-box;
+        border-right: solid 2px;
+        border-color: $background_grey;
+        -webkit-box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);;
+        box-shadow: 6px 0px 5px 0px rgba(0, 0, 0, 0.10);
+    }
+}
