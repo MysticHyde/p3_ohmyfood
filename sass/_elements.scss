@@ -2,6 +2,18 @@
     font-family: "Shrikhand", "cursive";
 }
 
+.thumbnail {
+    overflow: hidden;
+    height: 250px;
+    width: 100%;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .card {
     position: relative;
     display: flex;
@@ -11,18 +23,6 @@
     overflow: hidden;
     background-color: white;
     @extend %shadow_down;
-
-    .thumbnail {
-        overflow: hidden;
-        height: 250px;
-        width: 100%;
-
-        img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-    }
 
     .about {
         display: flex;

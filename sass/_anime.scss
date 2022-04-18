@@ -33,11 +33,41 @@
 
 @-webkit-keyframes disappear {
     from {
-        font-size: 0;
-        opacity: 5;
+        color: black;
     }
     to {
-        font-size: 30px;
-        opacity: 0;
+        color: $primaire_violet;
     }
 }
+
+@keyframes slide {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50px;
+    }
+}
+
+@-webkit-keyframes slide {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50px;
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        margin-top: 5px;
+    }
+    to {
+        margin-top: 0px;
+        opacity:1;
+        background-color: red;
+    }
+}
+

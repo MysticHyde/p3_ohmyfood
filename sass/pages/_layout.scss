@@ -1,0 +1,125 @@
+.restaurant_page {
+    main {
+        width: 100vw;
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 400px;
+
+        .title {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: -60px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+            padding: 30px 20px;
+            border-radius:  50px 50px 0 0;
+            background-color: $background_grey;
+        }
+        .menu_container{
+            background-color: $background_grey;
+            padding: 0 20px;
+            padding-top: 40px;
+
+            @for $i from 1 through 6 {
+                #$i {
+                    animation-delay: 1s * $i;
+                 }
+            }
+
+            .menu__title {
+                text-transform: uppercase;
+                font-weight: 300;
+                border-bottom: 4px solid;
+                border-color: $tertiaire_vert;
+                line-height: 30px;
+                width: 50px;
+            }
+            
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                background-color: white;
+                border-radius: 20px;
+                color: $dark_grey;
+                overflow: hidden;
+                @extend %shadow_down;
+                animation: 1s fadein;
+                
+                .about {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    height: 100%;
+                    padding: 10px 0 10px 10px;
+
+                    h3, p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+
+                .price {
+                    display: flex;
+                    align-items: flex-end;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    padding-right: 20px;
+                    height: 100%;
+                    font-weight: 900;
+                    margin-left: auto;
+
+                }
+                .checked {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 70px;
+                    color: white;
+                    font-size: 20px;
+                    background-color: $tertiaire_vert;
+                    margin-right: -70px;  
+                    transition: margin-right 1s;
+                }
+
+            }
+
+            input[type="checkbox"] {
+                display: none;
+                
+                &:hover {
+                    + label {
+
+                        .checked{
+                            margin-right: 0;  
+                            transition: margin-right 1s;
+
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+
+    }
+        
+        
+    }
+}
