@@ -1,0 +1,161 @@
+.restaurant_page {
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    main {
+        .thumbnail {
+            height: 350px;
+            width: 100%;
+            overflow: hidden;
+            img {
+                width: 100%;
+                object-position: center;
+                object-fit: scale-down;
+            }
+        }
+
+        .container {
+            flex-direction: column;
+            position: relative;
+            background-color: $light_grey;
+            border-radius: 40px 40px 0 0;
+
+            &__title {
+                border-radius: 40px 40px 0 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 20px;
+                height: 70px;
+                margin-top: -70px;
+            }
+
+            .menu {
+                padding: 0 20px;
+                padding-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                &__title {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    border-bottom: 4px solid;
+                    border-color: $tertiary;
+                    width: 50px;
+                    margin-bottom: 10px;
+                }
+
+                @for $i from 1 through 3 {
+                    .menu__item:nth-of-type(#{$i}) {
+                    animation: 1s item_appear forwards;
+                      animation-delay: $i * 200ms ;
+                    }
+                  }
+                
+                &__list{ 
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    
+                      .menu__item {
+                          display: flex;
+                          flex-direction: column;
+                          opacity: 0;
+                          gap: 20px;
+      
+                          label {
+                              cursor: pointer;
+                          }
+      
+                          &:hover {
+                              button {
+                                  margin-right: 0;
+                                  i {
+                                      transform: rotate(0deg);
+                                  }
+                              }
+                          }
+      
+                          input {
+                              display: none;
+                          }
+      
+                          &__content {
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: space-between;
+                              border-radius: 20px;
+                              background-color: white;
+                              overflow: hidden;
+                              @include primary-shadow;
+      
+                              &--about {
+                                  padding: 15px 10px;
+                                      overflow: hidden;
+      
+      
+                                  h3,
+                                  p {
+                                      text-overflow: ellipsis;
+                                      overflow: hidden;
+                                      white-space: nowrap;
+                                  }
+                              }
+      
+                              &--price {
+                                  display: flex;
+                                  margin-left: auto;
+                                  align-items: flex-end;
+                                  padding: 15px 10px;
+                                  font-weight: 900;
+                                  padding-right: 30px;
+                              }
+      
+                              &--button {
+                                  display: flex;
+                                  justify-self: flex-end;
+                                  align-items: center;
+                                  justify-content: center;
+                                  color: white;
+                                  background-color: $tertiary;
+                                  border: none;
+                                  width: 80px;
+                                  margin-right: -80px;
+                                  transition: 500ms margin-right ease;
+      
+                                  i{
+                                      transform: rotate(90deg);
+                                      transition: 1s transform ease;
+                                  }
+                              }
+                          }
+                      }
+                    }
+                  
+
+
+                &__sender {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 30px;
+                    margin-bottom: 80px;
+                    button{
+                        font-weight: 500;
+                        padding: 15px 50px;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
