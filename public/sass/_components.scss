@@ -24,11 +24,18 @@
     box-sizing: border-box;
     width: fit-content;
 
+    
     &--gradient {
         font-size: 18px;
         color: white;
         @include primary-shadow;
         @include gradient-background;
+
+        &:hover{
+            background: linear-gradient(180deg, lighten(rgba(255, 121, 218, 1), 10%) 0%, lighten(rgba(147, 86, 220, 1), 10%) 100%)
+
+        }
+        
     }
     &--searchbar {
         font-family: "Roboto", "FontAwesome";
@@ -45,7 +52,7 @@
     }
 }
 
-.exit{
+.exit {
     position: absolute;
     display: flex;
     align-items: center;
@@ -116,6 +123,16 @@
         &:checked {
             + .menu-card__content {
                 background-color: lighten($primary, 32%);
+
+                i {
+                    color: $primary;
+                }
+            }
+        }
+        &:hover {
+            + .menu-card__content {
+                background-color: lighten($primary, 32%);
+                cursor: pointer;
 
                 i {
                     color: $primary;
@@ -230,20 +247,20 @@
     -webkit-animation: out 0s ease-in 2s forwards;
     animation: out 0s ease-in 2s forwards;
 
-    .brand{
+    .brand {
         margin-right: 30px;
     }
-    .spinner{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(255,255,255,.3);
-    border-radius: 50%;
-    border-top-color: $primary;
-    -webkit-animation: out 0s ease-in 5s forwards;
-    animation: out 0s ease-in 5s forwards;
+    .spinner {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: $primary;
+        -webkit-animation: out 0s ease-in 5s forwards;
+        animation: out 0s ease-in 5s forwards;
 
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
     }
-  }
+}
